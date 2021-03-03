@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>iPhone Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style2.css">
+<style type="text/css">
+  body {
+    
+   background: #F0F0F0;
+    }
+  </style>
+  
+</head>
+
+<body>
+ <div class="login">
+   <br>
+    <h1 style= "margin-left:410px;font-size: 40px;color: black;  text-decoration-line: underline;
+    text-decoration-style: solid; ">GET YOUR iPHONE RATE HERE</h1>
+    <br>
+    <p style = "margin-left:330px;font-size: 30px;color: black;">Enter your listing title in given input box and click predict to get price.</p> 
+    <p style = "margin-left:430px;font-size: 30px;color: black;">Scroll down to know important words to include.</p> 
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post" style= "margin-left:460px;margin-top:100px;">
+    	<input type="text" name="Listing Title" placeholder="Enter input" required="required" size="70" width= "48"  style= "color:rgb(6, 22, 29); height:40px;" />
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary btn-block btn-large" style= "padding: 8px 22px;text-align:center;width: 530px;height:40px;background-color:skyblue">Predict Price</button>
+    </form>
+   <h2 style = "margin-left: 570px;">
+   <!--{{ prediction_text }}-->
+   </h2>
+
+   
+
+ </div>
+</body>
+</html>
